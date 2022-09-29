@@ -89,9 +89,10 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
   }
 
   fileprivate func loadInterstitial() {
+      GADMobileAds.sharedInstance().applicationMuted = true
     let request = GADRequest()
     GADInterstitialAd.load(
-      withAdUnitID: "ca-app-pub-3940256099942544/4411468910", request: request
+      withAdUnitID: "ca-app-pub-3940256099942544/8691691433", request: request
     ) { (ad, error) in
       if let error = error {
         print("Failed to load interstitial ad with error: \(error.localizedDescription)")
